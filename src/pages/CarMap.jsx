@@ -4,6 +4,7 @@ import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup } from 'react-leaflet/Popup'
+import { Icon } from '../components/Icon'
 
 const center = [-23.586575844488742, -46.67346148146696]
 
@@ -38,7 +39,10 @@ const CarMap = () => {
             {
               cars.length > 0 && cars.map(car => {
                 return (
-                  <Marker key={car._id} position={[car.lat, car.lng]}>
+                  <Marker 
+                    key={car._id} 
+                    position={[car.lat, car.lng]}
+                  >
                     <Popup>
                       { car.image && <img width="100%" src={car.image} alt={car.model} /> }
                       <h2>{car.order}. {car.make.toUpperCase()} {car.model.toUpperCase()} {car.yearManufacture}/{car.yearModel}</h2>
