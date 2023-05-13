@@ -4,7 +4,6 @@ import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup } from 'react-leaflet/Popup'
-import { Icon } from '../components/Icon'
 
 const center = [-23.586575844488742, -46.67346148146696]
 
